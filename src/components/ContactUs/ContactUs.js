@@ -117,7 +117,7 @@ margin:"auto",
 backgroundImage: "linear-gradient(lightblue, blue)"}}
  >
 <div class="col-75">
-<Form onSubmit={this.formSubmitHandler}>
+<Form>
   <Form.Group controlId="formBasicEmail">
     <Form.Label>Fullname </Form.Label>
     <Form.Control type="text" placeholder="Enter Fullname"/>

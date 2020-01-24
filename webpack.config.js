@@ -40,6 +40,10 @@ module:{
 			// exclude:/node_modules/,
 			use:['style-loader','css-loader'] // to convert css to js
 		// from right first css loader second style loader
+		},{
+			test:/\.(png|jpg|jpeg|svg|gif)$/,
+			use:'file-loader?[name].[ext]'
+			//use:'file-loader'
 		}
 
 	]

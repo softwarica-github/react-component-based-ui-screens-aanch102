@@ -375,11 +375,10 @@ import{
 import Login from './components/Login/Login' 
 import Registration from './components/Registration/Registration' 
 import ContactUs from './components/ContactUs/ContactUs' 
+//import logo from '../public/assets/' 
+import Home from './components/Home/Home' 
+
 import Carousel from 'react-bootstrap/Carousel'
-
-
-
-
 
 
 class Index extends React.Component{
@@ -387,25 +386,23 @@ class Index extends React.Component{
         super()
   }
 
-        /*Footer = () => {
+        Footer = () => {
          return (
                     <Row>
                       <Col sm={4}>
-                      About Hotel
-                      Location:
-                      Phone:
+                      
 
                       </Col>
                       <Col sm={4}>
-                      Copyright
+                      
                     </Col>
                       <Col sm={4}>
-                      Map
+                     
                     </Col>
             </Row>
                 )
 
-    }*/
+    }
 
   render(){
     return(
@@ -413,30 +410,19 @@ class Index extends React.Component{
           <div style={{
             padding:"10px",
 
-          }}>
-              <Navbar bg="dark" variant="dark">
+          }}><Container>
+              <Navbar bg="navbar-light bg-dark"    variant="white">
                 <Navbar.Brand href="#home">
-                 {/* <img
-                    alt="logo"
-                    src="logoo.jpeg"
-                    width="30"
-                    height="30"
-                  />{' '}*/}
+  
                   Little black bird bookstore
                 </Navbar.Brand>
                 <Nav variant="pills">
               <Nav.Item>
-                <Nav.Link as={Link} to="/" >Home</Nav.Link>
+                <Nav.Link as={Link} to="/home" >Home</Nav.Link>
               </Nav.Item>
               <Nav.Item>
                 <Nav.Link as={Link} to="/aboutus">AboutUs</Nav.Link>
               </Nav.Item>
-              {/* <Nav.Item>
-                <Nav.Link as={Link} to="/doctor">Doctor</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/treatment">Treatments</Nav.Link>
-              </Nav.Item>*/}
                <Nav.Item>
                 <Nav.Link as={Link} to="/registration">Registration</Nav.Link>
               </Nav.Item>
@@ -454,49 +440,22 @@ class Index extends React.Component{
                   <Button type="submit">Submit</Button>
               </Form>*/}
              </Navbar>
-
+</Container>
              
 
 
           </div>
         
-{/*<Carousel>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src=""
-      alt="First slide"
-    />
-    <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src=""
-      alt="Third slide"
-    />
 
-    <Carousel.Caption>
-      <h3>Second slide label</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="holder.js/800x400?text=Third slide&bg=20232a"
-      alt="Third slide"
-    />
+   <Switch>
 
-    <Carousel.Caption>
-      <h3>Third slide label</h3>
-      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-    </Carousel.Caption>
-  </Carousel.Item>
-</Carousel>*/}
+            <Route exact path="/home">
+              < Home/>
+            </Route>
+
+            <Route path="/home" component={Home}/>
+          </Switch>
+          
           <Switch>
 
             <Route exact path="/login">
